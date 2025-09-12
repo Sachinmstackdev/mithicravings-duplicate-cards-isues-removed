@@ -6,6 +6,19 @@ export const metadata: Metadata = {
   description: 'Indulge in handcrafted cakes, cookies, and brownies made with love and premium ingredients. No preservatives, freshly baked daily, delivered with care. Order your sweet moments today.',
   keywords: 'premium bakery, handmade cakes, artisan cookies, gourmet brownies, custom cakes, fresh baked goods, no preservatives, celebration cakes, Mumbai bakery, home delivery',
   authors: [{ name: 'Mithi Cravings' }],
+  icons: {
+    icon: [
+      {
+        url: 'https://res.cloudinary.com/twosapiens/image/upload/v1754964450/469590153_943912297673989_222213_zfzalg.png',
+        type: 'image/png',
+      },
+    ],
+    apple: [
+      {
+        url: '/apple-touch-icon.png',
+      },
+    ],
+  },
   openGraph: {
     title: 'Mithi Cravings - Premium Handmade Bakery',
     description: 'Handcrafted cakes, cookies, and brownies made with love and premium ingredients. Freshly baked daily with no preservatives.',
@@ -59,8 +72,8 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" href="https://res.cloudinary.com/twosapiens/image/upload/v1754964450/469590153_943912297673989_222213_zfzalg.png" />
+        {/* Apple touch icon is provided via metadata icons above */}
         <meta name="theme-color" content="#ec4899" />
       </head>
       <body className="font-inter antialiased bg-gradient-to-br from-pink-50 via-cream-50 to-beige-50 min-h-screen">
