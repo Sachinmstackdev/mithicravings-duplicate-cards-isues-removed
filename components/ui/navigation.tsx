@@ -50,10 +50,18 @@ export function Navigation({ onOrderClick }: NavigationProps) {
           }`}>
             <div className="flex items-center justify-between">
               {/* Logo */}
-              <div className="flex items-center space-x-3 group cursor-pointer">
-                <div className="w-12 h-12 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full flex items-center justify-center transform transition-transform group-hover:scale-110 shadow-lg">
-                  <span className="text-white font-bold text-xl font-playfair">M</span>
-                </div>
+              <div
+                className="flex items-center space-x-3 group cursor-pointer"
+                onClick={() => scrollToSection('home')}
+              >
+                <img
+                  src="https://res.cloudinary.com/twosapiens/image/upload/v1754964450/469590153_943912297673989_222213_zfzalg.png"
+                  alt="Mithi Cravings logo"
+                  className="w-12 h-12 rounded-full object-cover transform transition-transform group-hover:scale-110 shadow-lg"
+                  width={48}
+                  height={48}
+                  loading="eager"
+                />
                 <div className="transform transition-transform group-hover:translate-x-1">
                   <h1 className="font-playfair text-2xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
                     Mithi Cravings
