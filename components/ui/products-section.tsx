@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ProductModal } from '@/components/ui/product-modal';
-import { Star, Heart, Clock, Award, ChefHat, Sparkles } from 'lucide-react';
+import { Star, Heart, Clock, ChefHat, Sparkles } from 'lucide-react';
 
 interface Product {
   id: string;
@@ -18,126 +18,91 @@ interface Product {
   customizable?: boolean;
   sizes?: string[];
   flavors?: string[];
+  purchaseUrl?: string;
 }
 
 interface ProductsSectionProps {
   onWhatsAppOrder: (message: string) => void;
+  razorpayAllUrl?: string;
 }
+
+const RAZORPAY_PAGE_URL = 'https://rzp.io/rzp/YbNk87j';
 
 const products: Product[] = [
   // Celebration Cakes
   {
-    id: '1',
-    name: 'Chocolate Fudge Celebration Cake',
-    price: '₹1,299',
-    image: 'https://images.pexels.com/photos/1070850/pexels-photo-1070850.jpeg?auto=compress&cs=tinysrgb&w=600',
-    description: 'Rich, decadent chocolate layers with velvety fudge frosting. Perfect for birthdays and special celebrations.',
+    id: 'mango-cake',
+    name: 'Mango Cake',
+    price: '₹120',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1761275530/28_1_j4mjeu.png',
+    description: 'Fresh, light mango cake made to order with real mango flavor.',
     category: 'Celebration Cakes',
     popular: true,
-    customizable: true,
-    sizes: ['Small (1kg)', 'Medium (1.5kg)', 'Large (2kg)'],
-    flavors: ['Dark Chocolate', 'Milk Chocolate', 'White Chocolate']
+    purchaseUrl: 'https://rzp.io/l/mango-cake'
   },
   {
-    id: '2',
-    name: 'Vanilla Bean Dream Cake',
-    price: '₹1,199',
-    image: 'https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg?auto=compress&cs=tinysrgb&w=600',
-    description: 'Classic vanilla sponge with premium vanilla bean buttercream. Elegant and timeless.',
-    category: 'Celebration Cakes',
-    customizable: true,
-    sizes: ['Small (1kg)', 'Medium (1.5kg)', 'Large (2kg)'],
-    flavors: ['Vanilla Bean', 'French Vanilla', 'Madagascar Vanilla']
-  },
-  {
-    id: '3',
-    name: 'Red Velvet Royale',
-    price: '₹1,399',
-    image: 'https://images.pexels.com/photos/4913399/pexels-photo-4913399.jpeg?auto=compress&cs=tinysrgb&w=600',
-    description: 'Signature red velvet cake with cream cheese frosting. A royal treat for special occasions.',
+    id: 'nutella-cheesecake',
+    name: 'Nutella Cheesecake',
+    price: '₹160',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1761275987/mithi_cravings_2_vd86vc.png',
+    description: 'Creamy Nutella-infused cheesecake with rich chocolate-hazelnut goodness.',
     category: 'Celebration Cakes',
     popular: true,
-    customizable: true,
-    sizes: ['Small (1kg)', 'Medium (1.5kg)', 'Large (2kg)'],
-    flavors: ['Classic Red Velvet', 'Pink Velvet', 'Blue Velvet']
+    purchaseUrl: 'https://rzp.io/l/nutella-cheesecake'
   },
-  
-  // Artisan Cookies
   {
-    id: '4',
-    name: 'Chocolate Chip Cookie Box',
-    price: '₹399',
-    image: 'https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg?auto=compress&cs=tinysrgb&w=600',
-    description: 'Classic homemade chocolate chip cookies with premium Belgian chocolate chips. Box of 12 pieces.',
-    category: 'Artisan Cookies',
+    id: 'birthday-choco-truffle-500g',
+    name: 'Birthday Chocolate Truffle Cake',
+    price: '₹750 / 500 g',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1761276499/mithi_cravings_3_ueratr.png',
+    description: 'Rich chocolate truffle cake perfect for birthdays. 500 g serving.',
+    category: 'Celebration Cakes',
     popular: true,
-    sizes: ['Box of 12', 'Box of 24', 'Box of 36']
+    purchaseUrl: 'https://rzp.io/l/birthday-chocolate-truffle-500g'
   },
   {
-    id: '5',
-    name: 'Oatmeal Raisin Delights',
-    price: '₹429',
-    image: 'https://images.pexels.com/photos/4226861/pexels-photo-4226861.jpeg?auto=compress&cs=tinysrgb&w=600',
-    description: 'Chewy oatmeal cookies with plump raisins and a hint of cinnamon. Wholesome and delicious.',
-    category: 'Artisan Cookies',
-    sizes: ['Box of 12', 'Box of 24', 'Box of 36']
-  },
-  {
-    id: '6',
-    name: 'Double Chocolate Cookies',
-    price: '₹449',
-    image: 'https://images.pexels.com/photos/1028714/pexels-photo-1028714.jpeg?auto=compress&cs=tinysrgb&w=600',
-    description: 'Rich chocolate cookies loaded with chocolate chunks. A chocolate lover\'s paradise.',
-    category: 'Artisan Cookies',
-    sizes: ['Box of 12', 'Box of 24', 'Box of 36']
-  },
-  
-  // Gourmet Brownies
-  {
-    id: '7',
-    name: 'Fudgy Walnut Brownies',
-    price: '₹549',
-    image: 'https://images.pexels.com/photos/2373520/pexels-photo-2373520.jpeg?auto=compress&cs=tinysrgb&w=600',
-    description: 'Dense, fudgy brownies with premium walnuts. The perfect balance of chewy and nutty.',
+    id: 'kunafa-pistachio-brownies',
+    name: 'Kunafa Pistachio Brownies',
+    price: '₹150',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1754963533/8_j5k13n.png',
+    description: 'Middle Eastern kunafa twist with pistachio on rich brownies.',
     category: 'Gourmet Brownies',
     popular: true,
-    sizes: ['Box of 6', 'Box of 12', 'Box of 18']
+    purchaseUrl: 'https://rzp.io/l/kunafa-pistachio-brownies'
   },
   {
-    id: '8',
-    name: 'Salted Caramel Brownies',
-    price: '₹649',
-    image: 'https://images.pexels.com/photos/4040643/pexels-photo-4040643.jpeg?auto=compress&cs=tinysrgb&w=600',
-    description: 'Rich chocolate brownies topped with homemade salted caramel. Sweet meets salty perfection.',
+    id: 'best-seller-nutella-gooey-brownies',
+    name: 'Best seller Nutella Goey Brownies',
+    price: '₹120',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1761274928/27_4_phuaz0.png',
+    description: 'Customer-favorite ultra-gooey brownies loaded with Nutella.',
     category: 'Gourmet Brownies',
     popular: true,
-    sizes: ['Box of 6', 'Box of 12', 'Box of 18']
+    purchaseUrl: 'https://rzp.io/l/nutella-gooey-brownies'
   },
   {
-    id: '9',
-    name: 'Triple Chocolate Brownies',
-    price: '₹599',
-    image: 'https://images.pexels.com/photos/3026804/pexels-photo-3026804.jpeg?auto=compress&cs=tinysrgb&w=600',
-    description: 'Ultimate chocolate experience with dark, milk, and white chocolate. For serious chocolate lovers.',
-    category: 'Gourmet Brownies',
-    sizes: ['Box of 6', 'Box of 12', 'Box of 18']
+    id: 'rasmalai-cake',
+    name: 'Rasmalai Cake',
+    price: '₹100',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1761275083/26_1_kcqnbn.png',
+    description: 'Fusion dessert cake inspired by classic Indian Rasmalai.',
+    category: 'Celebration Cakes',
+    popular: true,
+    purchaseUrl: 'https://rzp.io/l/rasmalai-cake'
   }
+ 
 ];
 
-const categories = ['All', 'Celebration Cakes', 'Artisan Cookies', 'Gourmet Brownies'];
+// Category filters removed; showing all products
 
-export function ProductsSection({ onWhatsAppOrder }: ProductsSectionProps) {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+export function ProductsSection({ onWhatsAppOrder, razorpayAllUrl }: ProductsSectionProps) {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const filteredProducts = selectedCategory === 'All' 
-    ? products 
-    : products.filter(product => product.category === selectedCategory);
+  // Always show all products
 
   const handleProductClick = (product: Product) => {
-    setSelectedProduct(product);
-    setIsModalOpen(true);
+    window.location.href = razorpayAllUrl || RAZORPAY_PAGE_URL;
   };
 
   const handleOrder = (orderDetails: any) => {
@@ -158,6 +123,11 @@ ${orderDetails.message ? `📝 Special Instructions: ${orderDetails.message}` : 
 Please confirm the order details and payment process. Thank you!`;
 
     onWhatsAppOrder(message);
+  };
+
+  const handleGoToRazorpayAll = () => {
+    const url = razorpayAllUrl || RAZORPAY_PAGE_URL;
+    window.location.href = url;
   };
 
   return (
@@ -197,36 +167,99 @@ Please confirm the order details and payment process. Thank you!`;
           </p>
         </div>
 
-        {/* Enhanced Category Filters */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`group relative px-8 py-3.5 rounded-full font-medium transition-all duration-500 ${
-                selectedCategory === category
-                  ? 'bg-gradient-to-r from-pink-500 via-pink-600 to-pink-500 text-white shadow-xl transform hover:scale-[1.02]'
-                  : 'bg-white/80 backdrop-blur-sm text-gray-700 hover:text-pink-600 shadow-soft hover:shadow-lg'
-              }`}
-              aria-pressed={selectedCategory === category ? "true" : "false"}
-              aria-label={`Filter by ${category}`}
-            >
-              <span className="relative z-10 flex items-center">
-                {selectedCategory === category && (
-                  <Sparkles className="w-4 h-4 mr-2 animate-pulse" />
-                )}
-                {category}
-              </span>
-              {selectedCategory !== category && (
-                <span className="absolute inset-0 bg-gradient-to-r from-pink-50 to-pink-100/50 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-              )}
-            </button>
-          ))}
+        {/* Category filters removed */}
+
+        {/* Mobile: Horizontal Swipe Carousel */}
+        <div className="md:hidden -mx-4 px-4">
+          <div className="flex overflow-x-auto gap-6 snap-x snap-mandatory pb-2" role="list" aria-label="Products carousel">
+            {products.map((product, index) => (
+              <div
+                key={product.id}
+                className="snap-center shrink-0 w-72"
+                role="listitem"
+              >
+                {/* Card Glow Effect */}
+                <div className="relative">
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-pink-600 rounded-[2rem] blur opacity-0" aria-hidden="true"></div>
+                  <Card 
+                    className="relative bg-white/90 backdrop-blur-sm border-0 rounded-[1.5rem] overflow-hidden shadow-md"
+                    onClick={() => handleProductClick(product)}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        handleProductClick(product);
+                      }
+                    }}
+                    aria-label={`View details of ${product.name}`}
+                  >
+                    <CardContent className="p-0">
+                      {/* Image Container */}
+                      <div className="relative h-56 sm:h-64 overflow-hidden">
+                        <img
+                          src={product.image}
+                          alt={product.name}
+                          className="w-full h-full object-cover transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/0 to-black/0"></div>
+                        {/* Price Tag */}
+                        <div className="absolute top-4 right-4">
+                          <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                            <span className="font-semibold text-gray-900">{product.price}</span>
+                          </div>
+                        </div>
+                        {/* Badges */}
+                        <div className="absolute top-4 left-4 flex gap-2">
+                          {product.popular && (
+                            <Badge className="bg-pink-500 text-white border-0 shadow-lg">
+                              <Star className="w-3 h-3 mr-1" />
+                              Popular
+                            </Badge>
+                          )}
+                          {product.customizable && (
+                            <Badge className="bg-purple-500 text-white border-0 shadow-lg">
+                              <Sparkles className="w-3 h-3 mr-1" />
+                              Custom
+                            </Badge>
+                          )}
+                        </div>
+                      </div>
+                      {/* Content */}
+                      <div className="p-6 space-y-4">
+                        <h3 className="text-xl font-semibold text-gray-800">
+                          {product.name}
+                        </h3>
+                        <p className="text-gray-600 line-clamp-2">
+                          {product.description}
+                        </p>
+                        {/* Features */}
+                        <div className="flex items-center gap-4 text-sm text-gray-500">
+                          {product.sizes && (
+                            <div className="flex items-center">
+                              <Clock className="w-4 h-4 mr-1 text-pink-500" />
+                              <span>{product.sizes.length} Sizes</span>
+                            </div>
+                          )}
+                          {product.flavors && (
+                            <div className="flex items-center">
+                              <Heart className="w-4 h-4 mr-1 text-pink-500" />
+                              <span>{product.flavors.length} Flavors</span>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Enhanced Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-          {filteredProducts.map((product, index) => (
+        {/* Desktop/Tablet: Grid */}
+        <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+          {products.map((product, index) => (
             <div
               key={product.id}
               className="group relative transform hover:-translate-y-1 transition-all duration-300"
@@ -250,7 +283,7 @@ Please confirm the order details and payment process. Thank you!`;
               >
                 <CardContent className="p-0">
                   {/* Image Container */}
-                  <div className="relative h-64 overflow-hidden">
+                  <div className="relative h-56 sm:h-64 overflow-hidden">
                     <img
                       src={product.image}
                       alt={product.name}
@@ -311,6 +344,21 @@ Please confirm the order details and payment process. Thank you!`;
               </Card>
             </div>
           ))}
+        </div>
+
+        {/* Razorpay All-Options Button */}
+        <div className="flex justify-center mt-12">
+          <Button
+            onClick={handleGoToRazorpayAll}
+            className="group relative overflow-hidden px-10 py-6 rounded-full text-lg font-semibold bg-gradient-to-r from-rose-400 via-pink-500 to-amber-400 text-white shadow-[0_8px_24px_rgba(244,114,182,0.35)] hover:shadow-[0_12px_28px_rgba(244,114,182,0.5)] ring-2 ring-rose-200/60 hover:ring-rose-300/80 transition-all duration-300 transform hover:-translate-y-0.5"
+            aria-label="Explore More Delights"
+          >
+            <span className="absolute -left-10 top-0 h-full w-1/3 bg-gradient-to-r from-white/0 via-white/30 to-white/0 -skew-x-12 transform -translate-x-[150%] group-hover:translate-x-[250%] transition-transform duration-700 ease-out pointer-events-none" />
+            <span className="relative flex items-center">
+              <ChefHat className="w-5 h-5 mr-2 text-white" />
+              <span>Explore More Delights</span>
+            </span>
+          </Button>
         </div>
       </div>
 

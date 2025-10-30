@@ -9,63 +9,56 @@ import { MapPin } from 'lucide-react';
 const testimonials = [
   {
     id: 1,
-    name: 'Priya Sharma',
-    location: 'Mumbai',
-    text: 'Absolutely divine! The chocolate fudge cake was perfect for my daughter\'s birthday. The quality and taste exceeded all expectations. Will definitely order again!',
+    name: 'vinod',
+    location: 'Delhi',
+    text: "Got the Rasmalai Cake for a family dinner fresh and not too sweet. Everyone asked where I ordered from.",
     rating: 5,
-    product: 'Chocolate Fudge Cake',
-    image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150'
+    product: 'Rasmalai Cake',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1747893958/image_4_rpgncg.png'
   },
   {
     id: 2,
-    name: 'Rahul Gupta',
-    location: 'Pune',
-    text: 'Best brownies in the city! Fresh, fudgy, and delivered right on time. The salted caramel brownies are to die for. Mithi Cravings has won my heart!',
+    name: 'Ashutos mishra',
+    location: 'Lucknow',
+    text: 'Nutella Cheesecake was spot on creamy, rich, and not heavy. Delivery was quick too.',
     rating: 5,
-    product: 'Salted Caramel Brownies',
-    image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150'
+    product: 'Nutella Cheesecake',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1747893959/image_3_sfske4.png'
   },
   {
     id: 3,
-    name: 'Anita Desai',
-    location: 'Delhi',
-    text: 'Beautiful custom cake design and the taste was exceptional! They perfectly captured my vision and delivered beyond expectations. Highly recommended!',
+    name: 'DR Sujata Singh',
+    location: 'Noida',
+    text: 'Birthday Chocolate Truffle Cake looked gorgeous and tasted even better. Kids finished it fast!',
     rating: 5,
-    product: 'Custom Red Velvet Cake',
-    image: 'https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=150'
+    product: 'Birthday Chocolate Truffle Cake',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1747893959/image_1_nyihdt.png'
   },
   {
     id: 4,
-    name: 'Vikram Singh',
-    location: 'Bangalore',
-    text: 'The cookies are absolutely amazing! Ordered for my office party and everyone loved them. Fresh, crispy, and packed with flavor. Will order again soon!',
+    name: 'Jayveer dev',
+    location: 'Delhi',
+    text: 'Tried the Kunafa Pistachio Brownies crisp top, gooey center. Fun twist, will reorder.',
     rating: 5,
-    product: 'Chocolate Chip Cookies',
-    image: 'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=150'
+    product: 'Kunafa Pistachio Brownies',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1747893958/WhatsApp_Image_2025-04-09_at_19.20.16_5c2db04b_oibmpf.jpg'
   },
   {
     id: 5,
-    name: 'Meera Patel',
-    location: 'Ahmedabad',
-    text: 'Outstanding quality and service! The vanilla bean cake was moist, flavorful, and beautifully decorated. Mithi Cravings made our anniversary special!',
+    name: 'ranjit singh',
+    location: 'Amritsar',
+    text: 'Mango Cake tasted like real mango light, fresh, and great value.',
     rating: 5,
-    product: 'Vanilla Bean Dream Cake',
-    image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150'
-  },
-  {
-    id: 6,
-    name: 'Arjun Mehta',
-    location: 'Chennai',
-    text: 'Incredible attention to detail and taste! The triple chocolate brownies were rich, decadent, and perfectly balanced. Best bakery experience ever!',
-    rating: 5,
-    product: 'Triple Chocolate Brownies',
-    image: 'https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=150'
+    product: 'Mango Cake',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1747893959/image_2_xql6kh.png'
   }
 ];
 
 export function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [touchCurrentX, setTouchCurrentX] = useState<number | null>(null);
 
   useEffect(() => {
     if (!isAutoPlaying) return;
@@ -92,8 +85,34 @@ export function TestimonialsSection() {
     setIsAutoPlaying(false);
   };
 
+  const handleTouchStart = (e: any) => {
+    setTouchStartX(e.touches[0].clientX);
+    setTouchCurrentX(null);
+  };
+
+  const handleTouchMove = (e: any) => {
+    if (touchStartX !== null) {
+      setTouchCurrentX(e.touches[0].clientX);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX !== null && touchCurrentX !== null) {
+      const delta = touchStartX - touchCurrentX;
+      if (Math.abs(delta) > 50) {
+        if (delta > 0) {
+          nextTestimonial();
+        } else {
+          prevTestimonial();
+        }
+      }
+    }
+    setTouchStartX(null);
+    setTouchCurrentX(null);
+  };
+
   return (
-    <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section id="testimonials" className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Premium Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-pink-50/90 via-cream-50/80 to-beige-50/90"></div>
@@ -141,6 +160,9 @@ export function TestimonialsSection() {
               className="flex transition-transform duration-700 ease-out"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
               role="list"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
             >
               {testimonials.map((testimonial) => (
                 <div 
