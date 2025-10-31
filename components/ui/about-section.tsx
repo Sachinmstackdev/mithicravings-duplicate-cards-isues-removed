@@ -27,7 +27,7 @@ export function AboutSection() {
             </span>
           </div>
           
-          <h2 className="text-5xl lg:text-6xl font-playfair font-bold leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-playfair font-bold leading-tight">
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800">
               Baked with Love,
             </span>
@@ -36,36 +36,47 @@ export function AboutSection() {
             </span>
           </h2>
           
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             At Mithi Cravings, every creation tells a story of passion, quality, and the pure joy of sharing sweetness with the world.
             Each recipe is crafted with care, tradition, and a touch of innovation.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-20">
           {/* Enhanced Story Content */}
           <div className="space-y-8 animate-slide-in-left">
             <div className="space-y-6">
-              <h3 className="text-3xl font-playfair font-bold bg-gradient-to-r from-gray-800 to-gray-900 bg-clip-text text-transparent">
-                From Kitchen to Heart
+              <h3 className="text-2xl sm:text-3xl font-playfair font-bold bg-gradient-to-r from-gray-800 to-gray-900 bg-clip-text text-transparent">
+                🍰 The Story of Mithi Cravings – From a Home Kitchen to a Dream Café
               </h3>
               
-              <div className="space-y-6 text-gray-600 leading-relaxed">
+              <div className="space-y-5 sm:space-y-6 text-gray-700 text-base sm:text-lg leading-relaxed">
                 <p className="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-gradient-to-b before:from-pink-400 before:to-pink-600 before:rounded-full">
-                  What started as a passion project in a small home kitchen has blossomed into Mumbai's most beloved artisan bakery. 
-                  Founded with the simple belief that every celebration deserves something extraordinary, Mithi Cravings was born from 
-                  a love for creating moments of pure joy through exceptional baked goods.
+                  Every big dream starts small — sometimes, right from your own kitchen.
                 </p>
-                
+
                 <p className="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-gradient-to-b before:from-cream-400 before:to-cream-600 before:rounded-full">
-                  Our founder, inspired by family recipes passed down through generations, began experimenting with premium ingredients 
-                  and innovative techniques. The result? Handcrafted treats that not only taste incredible but also carry the warmth 
-                  and love of home-style baking.
+                  Mithi Cravings began as a little spark of passion, born in a Delhi home but deeply rooted in the sweet nostalgia of Kolkata — my hometown, the City of Joy.
                 </p>
-                
+
                 <p className="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-gradient-to-b before:from-beige-400 before:to-beige-600 before:rounded-full">
-                  Today, we're proud to serve over 1000 happy customers, each one part of our extended family. Every cake, cookie, 
-                  and brownie is still made by hand, with the same attention to detail and commitment to quality that started it all.
+                  What started as a home bakery — a simple way to share love through eggless desserts — slowly turned into something much more. From the early days of whisking and baking in Paryavaran Complex, to serving smiles near PVR, and now welcoming everyone to a cozy corner called Mithi Cravings Dessert Lounge & Cafe. It’s been a journey baked with patience, hope, and heart.
+                </p>
+
+                <p className="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-gradient-to-b before:from-pink-400 before:to-pink-600 before:rounded-full">
+                  Mithi Cravings was never just about desserts — it was about dreams that once seemed too far away. A childhood wish to study hotel management never happened, but life had its own recipe. Today, that same dream lives in every cheesecake baked, every cookie crafted, and every smile that walks through the café door.
+                </p>
+
+                <p className="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-gradient-to-b before:from-cream-400 before:to-cream-600 before:rounded-full">
+                  Our bestsellers — the Blueberry Cheesecake, Biscoff Cheesecake, and the irresistible Nutella Cheesecake — tell their own stories of love, comfort, and indulgence. Each one is 100% eggless, handmade with care, with no gelatin and no preservatives — sprinkled with joy and pure love.
+                </p>
+
+                <p className="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-gradient-to-b before:from-beige-400 before:to-beige-600 before:rounded-full">
+                  To truly feel what Mithi Cravings is all about, don’t just take our word for it — visit our Instagram page and scroll through the reviews. Every post, every comment, and every “yum” is a chapter of our story written by you.
+                </p>
+
+                <p className="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-gradient-to-b before:from-pink-400 before:to-pink-600 before:rounded-full">
+                  Because at Mithi Cravings, every bite is a reminder: dreams don’t expire, they just need the right amount of time to rise. 💛
                 </p>
               </div>
             </div>
@@ -115,7 +126,7 @@ export function AboutSection() {
                   <img
                     src="https://images.pexels.com/photos/4686822/pexels-photo-4686822.jpeg?auto=compress&cs=tinysrgb&w=400"
                     alt="Baker at work"
-                    className="relative w-full h-48 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300"
+                    className="relative w-full h-40 sm:h-48 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300"
                   />
                 </div>
                 <div className="group relative transform transition-all duration-500 hover:scale-[1.02]">
@@ -123,7 +134,7 @@ export function AboutSection() {
                   <img
                     src="https://images.pexels.com/photos/4686818/pexels-photo-4686818.jpeg?auto=compress&cs=tinysrgb&w=400"
                     alt="Fresh ingredients"
-                    className="relative w-full h-32 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300"
+                    className="relative w-full h-28 sm:h-36 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300"
                   />
                 </div>
               </div>
@@ -133,7 +144,7 @@ export function AboutSection() {
                   <img
                     src="https://images.pexels.com/photos/4686820/pexels-photo-4686820.jpeg?auto=compress&cs=tinysrgb&w=400"
                     alt="Kitchen workspace"
-                    className="relative w-full h-32 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300"
+                    className="relative w-full h-28 sm:h-36 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300"
                   />
                 </div>
                 <div className="group relative transform transition-all duration-500 hover:scale-[1.02]">
@@ -141,21 +152,21 @@ export function AboutSection() {
                   <img
                     src="https://images.pexels.com/photos/4686819/pexels-photo-4686819.jpeg?auto=compress&cs=tinysrgb&w=400"
                     alt="Finished products"
-                    className="relative w-full h-48 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300"
+                    className="relative w-full h-40 sm:h-48 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300"
                   />
                 </div>
               </div>
             </div>
             
             {/* Enhanced Floating Stats */}
-            <div className="absolute -top-4 -left-4 bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+            <div className="hidden sm:block absolute -top-4 -left-4 bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
               <div className="text-center space-y-1">
                 <p className="text-3xl font-bold bg-gradient-to-r from-pink-600 to-pink-800 bg-clip-text text-transparent">3+</p>
                 <p className="text-sm text-gray-600 font-medium">Years Experience</p>
               </div>
             </div>
             
-            <div className="absolute -bottom-4 -right-4 bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+            <div className="hidden sm:block absolute -bottom-4 -right-4 bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
               <div className="text-center space-y-1">
                 <p className="text-3xl font-bold bg-gradient-to-r from-pink-600 to-pink-800 bg-clip-text text-transparent">100%</p>
                 <p className="text-sm text-gray-600 font-medium">Satisfaction</p>
@@ -219,10 +230,10 @@ export function AboutSection() {
           <div className="group relative transform transition-all duration-500">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-pink-600 rounded-[2rem] blur opacity-0 group-hover:opacity-30 transition duration-500"></div>
             <Card className="relative border-0 bg-white/90 backdrop-blur-sm shadow-xl group-hover:shadow-2xl transition-all duration-300 max-w-4xl mx-auto rounded-[1.5rem] overflow-hidden">
-              <CardContent className="p-12 space-y-8">
+              <CardContent className="p-6 sm:p-10 lg:p-12 space-y-8">
                 <div className="relative mx-auto">
                   <div className="absolute inset-0 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full blur-lg opacity-50 group-hover:opacity-70 transition-opacity"></div>
-                  <div className="relative h-20 w-20 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center mx-auto transform group-hover:scale-110 transition-transform">
+                  <div className="relative h-16 w-16 sm:h-20 sm:w-20 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center mx-auto transform group-hover:scale-110 transition-transform">
                     <Heart className="h-10 w-10 text-white" />
                   </div>
                 </div>
@@ -231,7 +242,7 @@ export function AboutSection() {
                   Our Mission
                 </h3>
                 
-                <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
                   "To create extraordinary moments of joy through exceptional baked goods, bringing families and friends together 
                   one sweet bite at a time. We believe that every celebration, big or small, deserves something truly special."
                 </p>
