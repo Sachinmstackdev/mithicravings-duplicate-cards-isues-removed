@@ -96,8 +96,8 @@ export function HeroSection({ onOrderClick }: HeroSectionProps) {
               <div data-parallax="-10" className="p-[6px] rounded-3xl bg-gradient-to-tr from-pink-500/60 via-rose-400/60 to-amber-300/60 shadow-2xl animate-fade-up delay-140 animate-float-soft">
                 <div className="rounded-[1.5rem] overflow-hidden bg-white">
                   <img
-                    src="https://images.pexels.com/photos/1070850/pexels-photo-1070850.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                    alt="Signature chocolate cake"
+                    src="https://res.cloudinary.com/twosapiens/image/upload/v1761890880/WhatsApp_Image_2025-10-31_at_10.11.22_AM_wvezrt.jpg"
+                    alt="Mithi Cravings kitchen - real photo"
                     className="h-[220px] sm:h-[260px] md:h-[300px] w-full object-cover"
                   />
                 </div>
@@ -109,8 +109,8 @@ export function HeroSection({ onOrderClick }: HeroSectionProps) {
               <div data-parallax="8" className="p-[6px] rounded-3xl bg-gradient-to-tr from-rose-400/60 via-pink-500/60 to-amber-300/60 shadow-2xl animate-fade-up delay-220 animate-float-soft">
                 <div className="rounded-[1.5rem] overflow-hidden bg-white">
                   <img
-                    src="https://images.pexels.com/photos/4040643/pexels-photo-4040643.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                    alt="Salted caramel brownies"
+                    src="https://res.cloudinary.com/twosapiens/image/upload/v1761890871/WhatsApp_Image_2025-10-31_at_10.11.22_AM_2_afbzae.jpg"
+                    alt="Kitchen workspace - real photo"
                     className="h-[260px] sm:h-[300px] md:h-[360px] w-full object-cover"
                   />
                 </div>
@@ -122,8 +122,8 @@ export function HeroSection({ onOrderClick }: HeroSectionProps) {
               <div data-parallax="-6" className="p-[6px] rounded-3xl bg-gradient-to-tr from-amber-300/60 via-rose-400/60 to-pink-500/60 shadow-2xl animate-fade-up delay-300 animate-float-soft">
                 <div className="rounded-[1.5rem] overflow-hidden bg-white">
                   <img
-                    src="https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                    alt="Artisan cookies"
+                    src="https://res.cloudinary.com/twosapiens/image/upload/v1761890879/WhatsApp_Image_2025-10-31_at_10.11.23_AM_b2dcbp.jpg"
+                    alt="Served desserts - real photo"
                     className="h-[220px] sm:h-[240px] md:h-[260px] w-full object-cover"
                   />
                 </div>

@@ -124,16 +124,24 @@ export function AboutSection() {
                 <div className="group relative transform transition-all duration-500 hover:scale-[1.02]">
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-pink-600 rounded-2xl blur opacity-0 group-hover:opacity-30 transition duration-500"></div>
                   <img
-                    src="https://images.pexels.com/photos/4686822/pexels-photo-4686822.jpeg?auto=compress&cs=tinysrgb&w=400"
-                    alt="Baker at work"
+                    src="https://res.cloudinary.com/twosapiens/image/upload/v1761890880/WhatsApp_Image_2025-10-31_at_10.11.22_AM_wvezrt.jpg"
+                    alt="Mithi Cravings kitchen - real photo"
                     className="relative w-full h-40 sm:h-48 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300"
                   />
                 </div>
                 <div className="group relative transform transition-all duration-500 hover:scale-[1.02]">
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-pink-600 rounded-2xl blur opacity-0 group-hover:opacity-30 transition duration-500"></div>
                   <img
-                    src="https://images.pexels.com/photos/4686818/pexels-photo-4686818.jpeg?auto=compress&cs=tinysrgb&w=400"
-                    alt="Fresh ingredients"
+                    src="https://res.cloudinary.com/twosapiens/image/upload/v1761890875/WhatsApp_Image_2025-10-31_at_10.11.23_AM_3_ube0ho.jpg"
+                    alt="Freshly made desserts - real photo"
+                    className="relative w-full h-28 sm:h-36 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300"
+                  />
+                </div>
+                <div className="group relative transform transition-all duration-500 hover:scale-[1.02]">
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-pink-600 rounded-2xl blur opacity-0 group-hover:opacity-30 transition duration-500"></div>
+                  <img
+                    src="https://res.cloudinary.com/twosapiens/image/upload/v1761890880/WhatsApp_Image_2025-10-31_at_10.11.21_AM_1_wvhe5c.jpg"
+                    alt="Dessert lounge & cafe - real photo"
                     className="relative w-full h-28 sm:h-36 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300"
                   />
                 </div>
@@ -142,24 +150,32 @@ export function AboutSection() {
                 <div className="group relative transform transition-all duration-500 hover:scale-[1.02]">
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-pink-600 rounded-2xl blur opacity-0 group-hover:opacity-30 transition duration-500"></div>
                   <img
-                    src="https://images.pexels.com/photos/4686820/pexels-photo-4686820.jpeg?auto=compress&cs=tinysrgb&w=400"
-                    alt="Kitchen workspace"
+                    src="https://res.cloudinary.com/twosapiens/image/upload/v1761890871/WhatsApp_Image_2025-10-31_at_10.11.22_AM_2_afbzae.jpg"
+                    alt="Kitchen workspace - real photo"
                     className="relative w-full h-28 sm:h-36 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300"
                   />
                 </div>
                 <div className="group relative transform transition-all duration-500 hover:scale-[1.02]">
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-pink-600 rounded-2xl blur opacity-0 group-hover:opacity-30 transition duration-500"></div>
                   <img
-                    src="https://images.pexels.com/photos/4686819/pexels-photo-4686819.jpeg?auto=compress&cs=tinysrgb&w=400"
-                    alt="Finished products"
+                    src="https://res.cloudinary.com/twosapiens/image/upload/v1761890871/WhatsApp_Image_2025-10-31_at_10.11.23_AM_2_dqn16k.jpg"
+                    alt="Finished products - real photo"
                     className="relative w-full h-40 sm:h-48 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300"
+                  />
+                </div>
+                <div className="group relative transform transition-all duration-500 hover:scale-[1.02]">
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-pink-600 rounded-2xl blur opacity-0 group-hover:opacity-30 transition duration-500"></div>
+                  <img
+                    src="https://res.cloudinary.com/twosapiens/image/upload/v1761890879/WhatsApp_Image_2025-10-31_at_10.11.23_AM_b2dcbp.jpg"
+                    alt="Served desserts - real photo"
+                    className="relative w-full h-28 sm:h-36 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300"
                   />
                 </div>
               </div>
             </div>
             
             {/* Enhanced Floating Stats */}
-            <div className="hidden sm:block absolute -top-4 -left-4 bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+            <div className="hidden sm:block absolute -top-20 md:-top-24 -left-4 bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
               <div className="text-center space-y-1">
                 <p className="text-3xl font-bold bg-gradient-to-r from-pink-600 to-pink-800 bg-clip-text text-transparent">3+</p>
                 <p className="text-sm text-gray-600 font-medium">Years Experience</p>
