@@ -10,6 +10,8 @@ import { Footer } from '@/components/ui/footer';
 import { WhatsAppFloat } from '@/components/ui/whatsapp-float';
 
 export default function Home() {
+  const RAZORPAY_PAGE_URL = 'https://rzp.io/rzp/YbNk87j';
+
   const handleWhatsAppOrder = (message?: string) => {
     const defaultMessage = 'Hi! I\'d like to place an order from Mithi Cravings. Please share your menu and pricing details.';
     const whatsappMessage = message || defaultMessage;
@@ -17,16 +19,20 @@ export default function Home() {
     window.open(whatsappUrl, '_blank');
   };
 
+  const handleRazorpayAll = () => {
+    window.location.href = RAZORPAY_PAGE_URL;
+  };
+
   return (
     <div className="min-h-screen">
       {/* Navigation */}
-      <Navigation onOrderClick={() => handleWhatsAppOrder()} />
+      <Navigation onOrderClick={handleRazorpayAll} />
 
       {/* Hero Section */}
-      <HeroSection onOrderClick={() => handleWhatsAppOrder()} />
+      <HeroSection onOrderClick={handleRazorpayAll} />
 
       {/* Products Section */}
-      <ProductsSection onWhatsAppOrder={handleWhatsAppOrder} />
+      <ProductsSection onWhatsAppOrder={handleWhatsAppOrder} razorpayAllUrl={RAZORPAY_PAGE_URL} />
 
       {/* Testimonials Section */}
       <TestimonialsSection />
