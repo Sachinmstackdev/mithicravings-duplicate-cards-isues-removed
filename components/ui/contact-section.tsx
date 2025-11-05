@@ -58,9 +58,10 @@ export function ContactSection({ onWhatsAppOrder }: ContactSectionProps) {
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-1">Address</h4>
                     <p className="text-gray-600 leading-relaxed">
-                      D46, Freedom Fighter Colony,<br />
-                      Paryavaran Complex, Sainik Farm,<br />
-                      New Delhi, Delhi 110030, India
+                      262 Westened Marg<br />
+                      Saidulayajabb<br />
+                      Saket, New Delhi 110030<br />
+                      Near Physics Walla
                     </p>
                   </div>
                 </div>
@@ -93,8 +94,26 @@ export function ContactSection({ onWhatsAppOrder }: ContactSectionProps) {
                     <h4 className="font-semibold text-gray-800 mb-1">Business Hours</h4>
                     <p className="text-gray-600">
                       Monday - Sunday<br />
-                      9:00 AM - 8:00 PM
+                      10:00 AM - 10:00 PM
                     </p>
+                  </div>
+                </div>
+
+                {/* Stall Address & Timing */}
+                <div className="flex items-start space-x-4">
+                  <div className="bg-pink-100 p-3 rounded-full">
+                    <MapPin className="h-6 w-6 text-pink-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-1">Stall Address</h4>
+                    <p className="text-gray-600 leading-relaxed">
+                      Saket Anupum PVR<br />
+                      Beside Sukla Paan bhandar, opposite to Look Saloon
+                    </p>
+                    <div className="mt-2 text-gray-600">
+                      <p className="font-medium">Stall Timings</p>
+                      <p>Friday, Saturday, Sunday<br />5:00 PM - 10:00 PM</p>
+                    </div>
                   </div>
                 </div>
               </div>

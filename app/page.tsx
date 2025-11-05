@@ -10,7 +10,7 @@ import { Footer } from '@/components/ui/footer';
 import { WhatsAppFloat } from '@/components/ui/whatsapp-float';
 
 export default function Home() {
-  const RAZORPAY_PAGE_URL = 'https://rzp.io/rzp/YbNk87j';
+  const RAZORPAY_PAGE_URL = '/pay';
 
   const handleWhatsAppOrder = (message?: string) => {
     const defaultMessage = 'Hi! I\'d like to place an order from Mithi Cravings. Please share your menu and pricing details.';

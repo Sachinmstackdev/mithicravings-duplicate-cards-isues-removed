@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { ProductModal } from '@/components/ui/product-modal';
 import { Star, Heart, Clock, ChefHat, Sparkles } from 'lucide-react';
 
-interface Product {
+export interface Product {
   id: string;
   name: string;
   price: string;
@@ -26,9 +26,9 @@ interface ProductsSectionProps {
   razorpayAllUrl?: string;
 }
 
-const RAZORPAY_PAGE_URL = 'https://rzp.io/rzp/YbNk87j';
+const RAZORPAY_PAGE_URL = '/pay';
 
-const products: Product[] = [
+export const products: Product[] = [
   // Celebration Cakes
   {
     id: 'mango-cake',
@@ -89,6 +89,111 @@ const products: Product[] = [
     category: 'Celebration Cakes',
     popular: true,
     purchaseUrl: 'https://rzp.io/l/rasmalai-cake'
+  },
+  // New items from client menu (images to be updated)
+  {
+    id: 'blueberry-cheesecake-per-piece',
+    name: 'Blueberry cheesecake per piece',
+    price: '₹160',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1762322819/download_3_wrhbds.png',
+    description: 'Creamy, smooth cheesecake topped with real blueberry sauce — tangy, sweet, and super satisfying. Per piece ₹160 | Half kg ₹700',
+    category: 'Cakes'
+  },
+  {
+    id: 'blueberry-cheesecake',
+    name: 'Blueberry Cheesecake',
+    price: '₹699',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1762322819/download_3_wrhbds.png',
+    description: '🫐 Blueberry Cheesecake — Creamy, smooth cheesecake topped with real blueberry sauce — tangy, sweet, and super satisfying. Per piece ₹160 | Half kg ₹700',
+    category: 'Cakes'
+  },
+  {
+    id: 'chocolate-truffle-cake',
+    name: 'Chocolate truffle cake',
+    price: '₹750',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1762325550/download_5_xhqlte.png',
+    description: 'Rich, gooey, and full of chocolatey goodness. This truffle cake melts in your mouth and hits every craving just right.',
+    category: 'Cakes'
+  },
+  {
+    id: 'biscoff-cheesecake-per-piece',
+    name: 'Biscoff cheesecake per piece',
+    price: '₹170',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1762325685/download_6_htznev.png',
+    description: '🍪 Biscoff Cheesecake — Creamy cheesecake layered with Biscoff spread and topped with crunchy Biscoff crumbs; rich, caramelized, and totally irresistible. Per piece ₹170 | Half kg ₹750',
+    category: 'Cakes'
+  },
+  {
+    id: 'biscoff-cheesecake-per-gms',
+    name: 'Biscoff cheesecake per gms',
+    price: '₹750',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1762325685/download_6_htznev.png',
+    description: 'Biscoff layered cheesecake, priced per weight.',
+    category: 'Cakes'
+  },
+  {
+    id: 'nutella-cheesecake-per-piece',
+    name: 'Nutella cheesecake per piece',
+    price: '₹170',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1761275987/mithi_cravings_2_vd86vc.png',
+    description: 'Smooth Nutella cheesecake slice with chocolate hazelnut.',
+    category: 'Cakes'
+  },
+  {
+    id: 'rasmalai-cake-soft-sponge',
+    name: 'Rasmalai Cake Soft sponge cake',
+    price: '₹99',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1761275083/26_1_kcqnbn.png',
+    description: 'Soft sponge cake soaked in saffron milk with rasmalai.',
+    category: 'Cakes'
+  },
+  {
+    id: 'nutella-cheesecake-per-gms',
+    name: 'Nutella cheesecake per gms',
+    price: '₹800',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1761275987/mithi_cravings_2_vd86vc.png',
+    description: 'Rich Nutella cheesecake priced per weight.',
+    category: 'Cakes'
+  },
+  {
+    id: 'coconut-pineapple-cake',
+    name: 'Coconut Pineapple Cake',
+    price: '₹100',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1754963549/3_jgktvr.png',
+    description: 'Light and fluffy cake infused with tropical pineapple and coconut.',
+    category: 'Cakes'
+  },
+  {
+    id: 'mix-seeds-dark-chocolate',
+    name: 'Mix seeds Dark Chocolate',
+    price: '₹399',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1762322232/WhatsApp_Image_2025-10-24_at_10.50.43_AM_nklx4k.jpg',
+    description: 'A rich blend of premium dark chocolate with mixed seeds.',
+    category: 'Chocolate'
+  },
+  {
+    id: 'chief-choice-nutella-brownies',
+    name: 'Chief Choice Nutella Brownies',
+    price: '₹120',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1762322584/download_2_lvxwh0.png',
+    description: '🍫 Chief Choice Nutella Brownies — Thick, gooey brownies loaded with Nutella; rich, fudgy, and pure chocolate heaven in every bite. A must-try for every brownie lover!',
+    category: 'Brownies'
+  },
+  {
+    id: 'pistachio-cookies-5pcs',
+    name: 'Pistachio cookies 5 pcs',
+    price: '₹400',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1761272300/WhatsApp_Image_2025-10-19_at_11.17.32_AM_xeolop.jpg',
+    description: 'Buttery, melt-in-mouth cookies loaded with crunchy pistachios. A perfect blend of rich flavor and nutty goodness in every bite!',
+    category: 'Cookies'
+  },
+  {
+    id: 'nutella-cookies',
+    name: 'Nutella Cookies',
+    price: '₹80',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1754963534/2_1_fpdito.png',
+    description: 'Crispy on the outside, soft inside, and filled with gooey Nutella – the kind of cookie you can’t stop at one! Per piece ₹80.',
+    category: 'Cookies'
   }
  
 ];
@@ -126,8 +231,7 @@ Please confirm the order details and payment process. Thank you!`;
   };
 
   const handleGoToRazorpayAll = () => {
-    const url = razorpayAllUrl || RAZORPAY_PAGE_URL;
-    window.location.href = url;
+    window.location.href = '/menu';
   };
 
   return (
