@@ -72,7 +72,10 @@ export function ContactSection({ onWhatsAppOrder }: ContactSectionProps) {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-1">Phone</h4>
-                    <p className="text-gray-600">+91 70440 85442</p>
+                    <p className="text-gray-600">
+                      +91 70440 85442<br />
+                      +91 98048 61575
+                    </p>
                   </div>
                 </div>
 
@@ -82,7 +85,10 @@ export function ContactSection({ onWhatsAppOrder }: ContactSectionProps) {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-1">Email</h4>
-                    <p className="text-gray-600">hello@mithicravings.com</p>
+                    <p className="text-gray-600">
+                      hello@mithicravings.com<br />
+                      mithicravings2023@gmail.com
+                    </p>
                   </div>
                 </div>
 

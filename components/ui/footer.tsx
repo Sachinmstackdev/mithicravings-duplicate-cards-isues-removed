@@ -27,16 +27,26 @@ export function Footer({ onWhatsAppOrder }: FooterProps) {
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-pink-400 flex-shrink-0" />
                 <span className="text-gray-300 text-sm">
-                  D46, Freedom Fighter Colony, Paryavaran Complex, Sainik Farm, New Delhi, Delhi 110030, India
+                  <span className="font-semibold">Store Address</span>: 262 Westened Marg, Saidulayajabb, Saket, New Delhi 110030 (Near Physics Walla)
+                  <br />
+                  <span className="font-semibold">Stall Address</span>: Saket Anupum PVR, Beside Sukla Paan bhandar, opposite to Look Saloon | Fri-Sun 5 PM - 10 PM
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-pink-400" />
-                <span className="text-gray-300">+91 70440 85442</span>
+                <span className="text-gray-300">
+                  +91 70440 85442
+                  <br />
+                  +91 98048 61575
+                </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-pink-400" />
-                <span className="text-gray-300">hello@mithicravings.com</span>
+                <span className="text-gray-300">
+                  hello@mithicravings.com
+                  <br />
+                  mithicravings2023@gmail.com
+                </span>
               </div>
             </div>
           </div>
