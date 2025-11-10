@@ -212,7 +212,7 @@ export function ContactSection({ onWhatsAppOrder }: ContactSectionProps) {
         <div className="w-full max-w-6xl mx-auto">
           <div className="bg-white rounded-2xl p-4 box-shadow-soft overflow-hidden">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3542.3309917826127!2d77.2007!3d28.5153!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce1e0ed037e6d%3A0x954e6e02589db78b!2sD46%2C%20Freedom%20Fighters%20Enclave%2C%20Neb%20Sarai%2C%20Sainik%20Farm%2C%20New%20Delhi%2C%20Delhi%20110030!5e1!3m2!1sen!2sin!4v1750831942477!5m2!1sen!2sin" 
+              src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3542.256241729245!2d77.1976794!3d28.5175253!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDMxJzA0LjIiTiA3N8KwMTEnNTQuMiJF!5e1!3m2!1sen!2sin!4v1762741216180!5m2!1sen!2sin" 
               width="100%" 
               height="450" 
               className="rounded-xl border-0"
