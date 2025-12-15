@@ -41,6 +41,26 @@ export const products: Product[] = [
     purchaseUrl: 'https://rzp.io/l/mango-cake'
   },
   {
+    id: 'nutella-cheesecake',
+    name: 'Nutella Cheesecake',
+    price: '₹160',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1761275987/mithi_cravings_2_vd86vc.png',
+    description: 'Creamy Nutella-infused cheesecake with rich chocolate-hazelnut goodness.',
+    category: 'Celebration Cakes',
+    popular: true,
+    purchaseUrl: 'https://rzp.io/l/nutella-cheesecake'
+  },
+  {
+    id: 'birthday-choco-truffle-500g',
+    name: 'Birthday Chocolate Truffle Cake',
+    price: '₹750 / 500 g',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1761276499/mithi_cravings_3_ueratr.png',
+    description: 'Rich chocolate truffle cake perfect for birthdays. 500 g serving.',
+    category: 'Celebration Cakes',
+    popular: true,
+    purchaseUrl: 'https://rzp.io/l/birthday-chocolate-truffle-500g'
+  },
+  {
     id: 'kunafa-pistachio-brownies',
     name: 'Kunafa Pistachio Brownies',
     price: '₹150',
@@ -80,6 +100,22 @@ export const products: Product[] = [
     category: 'Cakes'
   },
   {
+    id: 'blueberry-cheesecake',
+    name: 'Blueberry Cheesecake',
+    price: '₹699',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1762322819/download_3_wrhbds.png',
+    description: '🫐 Blueberry Cheesecake — Creamy, smooth cheesecake topped with real blueberry sauce — tangy, sweet, and super satisfying. Per piece ₹160 | Half kg ₹700',
+    category: 'Cakes'
+  },
+  {
+    id: 'chocolate-truffle-cake',
+    name: 'Chocolate truffle cake',
+    price: '₹750',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1762325550/download_5_xhqlte.png',
+    description: 'Rich, gooey, and full of chocolatey goodness. This truffle cake melts in your mouth and hits every craving just right.',
+    category: 'Cakes'
+  },
+  {
     id: 'biscoff-cheesecake-per-piece',
     name: 'Biscoff cheesecake per piece',
     price: '₹170',
@@ -88,11 +124,35 @@ export const products: Product[] = [
     category: 'Cakes'
   },
   {
+    id: 'biscoff-cheesecake-per-gms',
+    name: 'Biscoff cheesecake per gms',
+    price: '₹750',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1762325685/download_6_htznev.png',
+    description: 'Biscoff layered cheesecake, priced per weight.',
+    category: 'Cakes'
+  },
+  {
     id: 'nutella-cheesecake-per-piece',
     name: 'Nutella cheesecake per piece',
     price: '₹170',
     image: 'https://res.cloudinary.com/twosapiens/image/upload/v1761275987/mithi_cravings_2_vd86vc.png',
     description: 'Smooth Nutella cheesecake slice with chocolate hazelnut.',
+    category: 'Cakes'
+  },
+  {
+    id: 'rasmalai-cake-soft-sponge',
+    name: 'Rasmalai Cake Soft sponge cake',
+    price: '₹99',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1761275083/26_1_kcqnbn.png',
+    description: 'Soft sponge cake soaked in saffron milk with rasmalai.',
+    category: 'Cakes'
+  },
+  {
+    id: 'nutella-cheesecake-per-gms',
+    name: 'Nutella cheesecake per gms',
+    price: '₹800',
+    image: 'https://res.cloudinary.com/twosapiens/image/upload/v1761275987/mithi_cravings_2_vd86vc.png',
+    description: 'Rich Nutella cheesecake priced per weight.',
     category: 'Cakes'
   },
   {
